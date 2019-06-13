@@ -20,7 +20,8 @@ class App extends Component {
   
   // Lifecycle: 
   componentDidMount() {
-    this.loadScripts(test);
+    // Enable for testing, otherwise leave disabled
+    // this.loadScripts(test);
   }
 
   /** 
