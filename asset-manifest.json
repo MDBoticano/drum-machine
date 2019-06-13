@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/drum-machine/static/css/main.2cce8147.chunk.css",
-    "main.js": "/drum-machine/static/js/main.93ec563a.chunk.js",
-    "main.js.map": "/drum-machine/static/js/main.93ec563a.chunk.js.map",
+    "main.css": "/drum-machine/static/css/main.b0c5773f.chunk.css",
+    "main.js": "/drum-machine/static/js/main.79ba57f3.chunk.js",
+    "main.js.map": "/drum-machine/static/js/main.79ba57f3.chunk.js.map",
     "runtime~main.js": "/drum-machine/static/js/runtime~main.27309cc5.js",
     "runtime~main.js.map": "/drum-machine/static/js/runtime~main.27309cc5.js.map",
-    "static/js/2.6efc73d3.chunk.js": "/drum-machine/static/js/2.6efc73d3.chunk.js",
-    "static/js/2.6efc73d3.chunk.js.map": "/drum-machine/static/js/2.6efc73d3.chunk.js.map",
+    "static/js/2.d6a534e5.chunk.js": "/drum-machine/static/js/2.d6a534e5.chunk.js",
+    "static/js/2.d6a534e5.chunk.js.map": "/drum-machine/static/js/2.d6a534e5.chunk.js.map",
     "index.html": "/drum-machine/index.html",
-    "precache-manifest.354ca5a94662945d8ad6772a7079b744.js": "/drum-machine/precache-manifest.354ca5a94662945d8ad6772a7079b744.js",
+    "precache-manifest.d229f14c57dee7bad96375e3dbcaa241.js": "/drum-machine/precache-manifest.d229f14c57dee7bad96375e3dbcaa241.js",
     "service-worker.js": "/drum-machine/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/drum-machine/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/drum-machine/static/media/logo.5d5d9eef.svg"
+    "static/css/main.b0c5773f.chunk.css.map": "/drum-machine/static/css/main.b0c5773f.chunk.css.map"
   }
 }
