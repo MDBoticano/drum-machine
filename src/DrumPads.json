@@ -1,0 +1,17 @@
+{ 
+  "drumpads" : [{
+    "id" : "a-note",
+    "key" : "q",
+    "audioSource" : "a"
+  }, 
+  {
+    "id" : "b-note",
+    "key" : "w",
+    "audioSource" : "b"
+  }, 
+  {
+    "id" : "c-note",
+    "key" : "e",
+    "audioSource" : "c"
+  }]
+}
