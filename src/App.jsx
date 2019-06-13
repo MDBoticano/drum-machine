@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+// Styling
 import './App.css';
+
+// Components
+import Display from './Display';
 
 // URL(s) for scripts to load
 const test = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
 
-class App extends React.Component {
+class App extends Component {
+  // Constructor
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    }
+  }
   
   // Lifecycle: 
   componentDidMount() {
@@ -25,21 +36,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="drum-machine">
+        <Display />
       </div>
     );
   }
