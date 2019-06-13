@@ -1,48 +1,57 @@
 { 
   "drumpads" : [{
     "id" : "a-note",
-    "key" : "q",
+    "key" : "Q",
+    "audioID" : "a",
     "audioSource" : "a"
   }, 
   {
     "id" : "b-note",
-    "key" : "w",
+    "key" : "W",
+    "audioID" : "b",
     "audioSource" : "b"
   }, 
   {
     "id" : "c-note",
-    "key" : "e",
+    "key" : "E",
+    "audioID" : "c",
     "audioSource" : "c"
   },
   {
     "id" : "d-note",
-    "key" : "a",
+    "key" : "A",
+    "audioID" : "d",
     "audioSource" : "d"
   }, 
   {
     "id" : "e-note",
-    "key" : "s",
+    "key" : "S",
+    "audioID" : "e",
     "audioSource" : "e"
   }, 
   {
     "id" : "f-note",
-    "key" : "d",
+    "key" : "D",
+    "audioID" : "f",
     "audioSource" : "f"
   },
   {
     "id" : "g-note",
-    "key" : "z",
+    "key" : "Z",
+    "audioID" : "g",
     "audioSource" : "g"
   }, 
   {
     "id" : "bFlat-note",
-    "key" : "x",
+    "key" : "X",
+    "audioID" : "bFlat",
     "audioSource" : "bFlat"
   }, 
   {
     "id" : "eFlat-note",
-    "key" : "c",
-    "audioSource" : "cFlat"
+    "key" : "C",
+    "audioID" : "fSharp",
+    "audioSource" : "fSharp"
   }
 ]
 }

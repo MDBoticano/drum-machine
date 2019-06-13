@@ -8,7 +8,9 @@ class DrumPad extends Component {
     super(props);
     this.state = {
       id: this.props.pad.id,
-      key: this.props.pad.key
+      key: this.props.pad.key,
+      audioID: this.props.pad.audioID,
+      audioSource: this.props.pad.audioSource
     }
     this.playSound = this.playSound.bind(this);
   }
@@ -32,6 +34,7 @@ class DrumPad extends Component {
       
       <div onClick={this.playSound} className="drum-pad" id={this.state.id}>
         {this.state.key}
+        <audio className="clip" src={this.state.audioSource} id={this.state.key} />
       </div>
     );
   }

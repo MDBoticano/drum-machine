@@ -23,19 +23,12 @@ class Display extends Component {
 
   // Instantiate a DrumPad component per pad
   makePads = () => {
+    // Turn each drumpad object in the drumpads array into its own component
     const allPads = (this.props.pads.drumpads).map((drumpads) => 
       <DrumPad pad={drumpads} />
     );
 
     return allPads;
-
-    // return (
-    //   <>
-    //     <DrumPad pad={this.props.pads.drumpads[0]} />
-    //     <DrumPad pad={this.props.pads.drumpads[1]} />
-    //     <DrumPad pad={this.props.pads.drumpads[2]} />
-    //   </>
-    // );
   }
 
   // Display/update most recently played note
