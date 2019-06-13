@@ -1,0 +1,7 @@
+.drum-pad {
+  margin: .25em;
+  max-width: 96px;
+  background-color: rgb(177, 177, 177);
+  text-align: center;
+  display: inline-block;
+}

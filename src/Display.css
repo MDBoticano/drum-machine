@@ -1,0 +1,8 @@
+#display {
+  min-width: 20vw;
+  min-height: 20vh;
+  background-color: rgb(49, 49, 49);
+  margin: 10vh 10vh 0 10vh;
+  padding: 2em;
+  
+}

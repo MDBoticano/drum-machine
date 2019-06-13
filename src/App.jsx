@@ -6,9 +6,13 @@ import './App.css';
 // Components
 import Display from './Display';
 
+// Data: drum pads
+import pads from './data/DrumPads.json';
+
 // URL(s) for scripts to load
 const test = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
 
+// Class: App
 class App extends Component {
   // Constructor
   constructor(props) {
@@ -21,7 +25,7 @@ class App extends Component {
   // Lifecycle: 
   componentDidMount() {
     // Enable for testing, otherwise leave disabled
-    // this.loadScripts(test);
+    this.loadScripts(test);
   }
 
   /** 
@@ -35,10 +39,11 @@ class App extends Component {
     document.body.appendChild(script);
   }
 
+  // Render
   render() {
     return (
       <div id="drum-machine">
-        <Display />
+        <Display pads={pads} />
       </div>
     );
   }
