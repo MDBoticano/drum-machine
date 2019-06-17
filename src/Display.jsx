@@ -11,12 +11,24 @@ class Display extends Component {
       played: " "
     }
     this.displayPlayed = this.displayPlayed.bind(this);
+    // this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   // Lifecycle: after component mounts, pre-rendering
   componentDidMount() {
     console.log(this.props.pads);
-    // console.log(this.props.pads.drumpads[0]);
+    
+    // Add event listener for keypresses
+    document.addEventListener("keydown", this.handleKeyDown.bind(this));
+  }
+
+  // Remove modifications made in componentDidMount
+  componentWillUnmount() {
+    document.removeEventListener("keydown");
+  }
+
+  handleKeyDown = (event) => {
+    console.log(event);
   }
 
   // Take JS object from parent listing # of pads and respective notes
@@ -45,7 +57,7 @@ class Display extends Component {
   // Render
   render() {
     return (
-      <div id="display">
+      <div id="display" tabIndex="1" onKeyDown={this.handleKeyPress}>
         <div id="playedDisplay">
           <p id="clipName">{this.state.played}</p>
         </div>
