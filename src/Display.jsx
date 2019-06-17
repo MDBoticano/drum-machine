@@ -24,8 +24,9 @@ class Display extends Component {
   // Instantiate a DrumPad component per pad
   makePads = () => {
     // Turn each drumpad object in the drumpads array into its own component
-    const allPads = (this.props.pads.drumpads).map((drumpads) => 
-      <DrumPad pad={drumpads} />
+    const allPads = (this.props.pads.drumpads).map((drumpads, i) => 
+      // Gave each pad a key to avoid "Each child should have a key" error
+      <DrumPad pad={drumpads} key={i}/>
     );
 
     return allPads;

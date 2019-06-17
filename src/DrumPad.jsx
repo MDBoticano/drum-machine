@@ -8,7 +8,7 @@ class DrumPad extends Component {
     super(props);
     this.state = {
       id: this.props.pad.id,
-      key: this.props.pad.key,
+      hotkey: this.props.pad.hotkey,
       audioID: this.props.pad.audioID,
       audioSource: this.props.pad.audioSource
     }
@@ -17,7 +17,12 @@ class DrumPad extends Component {
 
   // On click or key-press, play associated sound
   playSound = () => {
-    return "";
+    let audio = document.getElementById(this.state.hotkey);
+    console.log("Clicked " + this.state.id);
+    // Adjusting volume
+    audio.volume = 0.5;
+    console.log("Audio adjusted");
+    audio.play();
   }
 
 
@@ -31,10 +36,10 @@ class DrumPad extends Component {
   // Instantiate a drum-pad from props  
   render() {
     return (
-      
+
       <div onClick={this.playSound} className="drum-pad" id={this.state.id}>
-        {this.state.key}
-        <audio className="clip" src={this.state.audioSource} id={this.state.key} />
+        {this.state.hotkey}
+        <audio className="clip" id={this.state.hotkey} src={this.state.audioSource} />
       </div>
     );
   }
