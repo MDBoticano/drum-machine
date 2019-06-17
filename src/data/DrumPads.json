@@ -1,55 +1,55 @@
 { 
   "drumpads" : [{
     "id" : "a-note",
-    "key" : "Q",
+    "hotkey" : "Q",
     "audioID" : "a",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
   }, 
   {
     "id" : "b-note",
-    "key" : "W",
+    "hotkey" : "W",
     "audioID" : "b",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
   }, 
   {
     "id" : "c-note",
-    "key" : "E",
+    "hotkey" : "E",
     "audioID" : "c",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"
   },
   {
     "id" : "d-note",
-    "key" : "A",
+    "hotkey" : "A",
     "audioID" : "d",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"
   }, 
   {
     "id" : "e-note",
-    "key" : "S",
+    "hotkey" : "S",
     "audioID" : "e",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"
   }, 
   {
     "id" : "f-note",
-    "key" : "D",
+    "hotkey" : "D",
     "audioID" : "f",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
   },
   {
     "id" : "g-note",
-    "key" : "Z",
+    "hotkey" : "Z",
     "audioID" : "g",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
   }, 
   {
     "id" : "bFlat-note",
-    "key" : "X",
+    "hotkey" : "X",
     "audioID" : "bFlat",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
   }, 
   {
     "id" : "eFlat-note",
-    "key" : "C",
+    "hotkey" : "C",
     "audioID" : "fSharp",
     "audioSource" : "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
   }
