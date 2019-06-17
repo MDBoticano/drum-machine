@@ -7,3 +7,14 @@
   margin: 10vh 10vh 0 10vh;
   padding: 2em;
 }
+
+#playedDisplay {
+  padding: .25em;
+  min-height: 40px;
+  display: block;
+  background-color: rgb(243, 243, 243);
+}
+
+#clipName {
+  text-align: center;
+}

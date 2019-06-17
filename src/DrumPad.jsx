@@ -22,7 +22,12 @@ class DrumPad extends Component {
     // Adjusting volume
     audio.volume = 0.5;
     console.log("Audio adjusted");
+
+    // Play audio clip
     audio.play();
+
+    // Use callback function to udpate display in parent
+    this.props.displayPlayed(this.state.id);
   }
 
 
