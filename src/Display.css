@@ -1,8 +1,9 @@
 #display {
   min-width: 20vw;
   min-height: 20vh;
-  background-color: rgb(49, 49, 49);
+  max-width: 320px; /* edit for responsiveness */
+  background-color: rgb(188, 229, 248);
+  border-radius: 8px;
   margin: 10vh 10vh 0 10vh;
   padding: 2em;
-  
 }
