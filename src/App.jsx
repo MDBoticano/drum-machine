@@ -10,7 +10,7 @@ import Display from './Display';
 import pads from './data/DrumPads.json';
 
 // URL(s) for scripts to load
-const test = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+// let test = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
 
 // Class: App
 class App extends Component {
@@ -24,8 +24,8 @@ class App extends Component {
   
   // Lifecycle: 
   componentDidMount() {
-    // Enable for testing, otherwise leave disabled
-    this.loadScripts(test);
+    // Enable for testing, disable when building to GH Pages
+    // this.loadScripts(test);
   }
 
   /** 

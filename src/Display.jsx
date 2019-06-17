@@ -15,7 +15,6 @@ class Display extends Component {
 
   // Lifecycle: after component mounts, pre-rendering
   componentDidMount() {
-    console.log(this.props.pads);
     
   }
 
@@ -24,21 +23,19 @@ class Display extends Component {
 
   }
 
-  // Instantiate a DrumPad component per pad
+  /* Turns each drumpad object into its own DrumPad component
+   * Returns multiple DrumPad components, so do not render directly
+   * Note: Gives each pad a key since "each child should have a key prop" 
+   */  
   makePads = () => {
-    // Turn each drumpad object in the drumpads array into its own component
     const allPads = (this.props.pads.drumpads).map((drumpads, i) => 
-      // Gave each pad a key to avoid "Each child should have a key" error
       <DrumPad pad={drumpads} displayPlayed={this.displayPlayed} key={i} />
     );
-
     return allPads;
   }
 
-  // Display/update most recently played note
-  // Callback function: pass into pads
+  // Callback function that displays the most recently played note
   displayPlayed = (padPlayedId) => {
-    // Set state
     this.setState({
       played: padPlayedId
     })
@@ -47,7 +44,7 @@ class Display extends Component {
   // Render
   render() {
     return (
-      <div id="display" tabIndex="1" onKeyDown={this.handleKeyPress}>
+      <div id="display">
         <div id="playedDisplay">
           <p id="clipName">{this.state.played}</p>
         </div>
@@ -56,6 +53,5 @@ class Display extends Component {
     );
   }
 }
-
 
 export default Display;

@@ -25,19 +25,16 @@ class DrumPad extends Component {
 
   // Lifecycle: Remove modifications made in componentDidMount
   componentWillUnmount() {
+    // Remove keypress event listener
     document.removeEventListener("keydown");
   }
 
-  // Function to deal with keyboard actions
+  // Handles keydowns from event listener
   handleKeyDown = (event) => {
-    // console.log("key: " + event.key);
-    // Play corresponding sound if key matches keycode
+    // Play component sound if key matches keycode
     if (event.keyCode === this.state.keycode) {
-      // console.log("Event match");
       this.playSound();
     }
-
-    // Depending on keypress, access child Drumpad component, and play
   }
 
   // On click or key-press, play associated sound
@@ -45,25 +42,20 @@ class DrumPad extends Component {
     let audio = document.getElementById(this.state.hotkey);
     // set currentTime to 0 to reset play
     audio.currentTime = 0;
-    console.log("Clicked " + this.state.id);
-    
+
     // Optional: Adjusting volume
-    audio.volume = 0.5;
+    audio.volume = 0.25;
     // console.log("Audio adjusted");
 
     // Play audio clip
     audio.play();
 
-    // Use callback function to udpate display in parent
+    // Optional: log note played
+    console.log(this.state.id);
+
+    // Use callback function to udpate most recent note played in parent display
     this.props.displayPlayed(this.state.id);
   }
-
-  /*
-   * Get drum-pad props
-   * 1 - Audio clip id
-   * 2 - keyboard key id
-   * 3 - Audio element
-   */
 
   // Instantiate a drum-pad from props  
   render() {
