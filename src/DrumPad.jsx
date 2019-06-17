@@ -18,10 +18,12 @@ class DrumPad extends Component {
   // On click or key-press, play associated sound
   playSound = () => {
     let audio = document.getElementById(this.state.hotkey);
+    audio.currentTime = 0;
     console.log("Clicked " + this.state.id);
-    // Adjusting volume
+    
+    // Optional: Adjusting volume
     audio.volume = 0.5;
-    console.log("Audio adjusted");
+    // console.log("Audio adjusted");
 
     // Play audio clip
     audio.play();

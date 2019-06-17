@@ -8,7 +8,7 @@ class Display extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      played: ""
+      played: " "
     }
     this.displayPlayed = this.displayPlayed.bind(this);
   }
@@ -16,7 +16,7 @@ class Display extends Component {
   // Lifecycle: after component mounts, pre-rendering
   componentDidMount() {
     console.log(this.props.pads);
-    console.log(this.props.pads.drumpads[0]);
+    // console.log(this.props.pads.drumpads[0]);
   }
 
   // Take JS object from parent listing # of pads and respective notes
