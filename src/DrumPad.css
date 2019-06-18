@@ -40,7 +40,8 @@
 }
 
 /* Media queries for responsive styling */
-@media (max-width: 767px) {
+@media (pointer: coarse) {
+  /* "Remove" hotkey hints if touch device by setting color to match bg */
   .pad-text {
     color: var(--pad-color);
   }
