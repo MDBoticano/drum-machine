@@ -44,7 +44,7 @@ class DrumPad extends Component {
     audio.currentTime = 0;
 
     // Optional: Adjusting volume
-    audio.volume = 0.25;
+    audio.volume = 0.20;
     // console.log("Audio adjusted");
 
     // Play audio clip
@@ -60,9 +60,18 @@ class DrumPad extends Component {
   // Instantiate a drum-pad from props  
   render() {
     return (
-      <div onClick={this.playSound} className="drum-pad" id={this.state.id}>
-        {/* {this.state.hotkey} */}
-        <audio className="clip" id={this.state.hotkey} src={this.state.audioSource} />
+      <div className="grid-pad">
+
+        <div className="padId">
+          {this.state.audioID}
+        </div>
+
+        <div onClick={this.playSound} className="drum-pad" id={this.state.id}>
+          <div className="pad-text">
+            {this.state.hotkey}
+          </div>
+          <audio className="clip" id={this.state.hotkey} src={this.state.audioSource} />
+        </div>
       </div>
     );
   }

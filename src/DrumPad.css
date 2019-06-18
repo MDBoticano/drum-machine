@@ -1,14 +1,38 @@
-.drum-pad {
-  margin: .75em;
-  
-  /* edit for responsiveness */
-  /* min-height: 80px; 
-  min-width: 80px;  
-  max-width: 96px;   */
+.grid-pad {
+  margin: 1em 1em;
+}
 
+.drum-pad {
+  margin: .25em 0;
   background-color: rgb(221, 221, 221);
   border-radius: 4px;
   filter: drop-shadow(2px 2px 2px rgb(46, 46, 46));
-  text-align: center;
-  /* display: inline-block; */
+
+  /* aspect ratio of 1:1 */
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+  
 }
+
+.pad-text {
+  /* text-align: center;
+  vertical-align: middle; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* bottom: 0;
+  right: 0; */
+}
+
+.padId {
+  text-align: center;
+  margin: 1em 0 0.5em 0;
+}
+
+
+
+
+
