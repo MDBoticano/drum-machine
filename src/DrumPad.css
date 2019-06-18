@@ -1,6 +1,8 @@
 /* variables */
 :root {
   --pad-color: rgb(221, 221, 221);
+  --pad-color-active: rgb(129, 129, 129);
+  --fadeout-time: .1s;
 }
 
 .grid-pad {
@@ -36,7 +38,24 @@
 .padId {
   text-align: center;
   font-size: 1.5em;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
+}
+
+.pad-animation {
+  /* don't forget to edit timeout in DrumPad.jsx */
+  animation: fadeout var(--fadeout-time);
+}
+@keyframes fadeout {
+  from { 
+    background-color: var(--pad-color-active);
+    color: var(--pad-color-active);
+    filter: drop-shadow(0 0 0 #000);
+  }
+  to { 
+    background-color: var(--pad-color);
+    color: black;
+    filter: drop-shadow(2px 2px 2px rgb(46, 46, 46));
+  }
 }
 
 /* Media queries for responsive styling */

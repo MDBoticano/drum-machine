@@ -15,6 +15,7 @@ class DrumPad extends Component {
     }
     this.playSound = this.playSound.bind(this);
     this.handleKeyDown.bind(this);
+    this.padAnimate.bind(this);
   }
 
   // Lifecycle: after component mounts, pre-rendering
@@ -39,6 +40,9 @@ class DrumPad extends Component {
 
   // On click or key-press, play associated sound
   playSound = () => {
+    // Call animation
+    this.padAnimate();
+
     let audio = document.getElementById(this.state.hotkey);
     // set currentTime to 0 to reset play
     audio.currentTime = 0;
@@ -55,6 +59,22 @@ class DrumPad extends Component {
 
     // Use callback function to udpate most recent note played in parent display
     this.props.displayPlayed(this.state.id);
+  }
+
+  // Animates pad by adding class then removing it after it's done
+  padAnimate = () => {
+    // Get the pad that was just activated
+    let activePad = document.getElementById(this.state.id);
+
+    // Remove animation class if it's already there (to enable rapid clicking)
+    activePad.classList.remove("pad-animation");
+
+    // Add then remove animation class
+    activePad.classList.add("pad-animation");
+    setTimeout(function () {
+      activePad.classList.remove("pad-animation");
+    }, 100); 
+    /* Don't forget to sync time with DrumPad.css */
   }
 
   // Instantiate a drum-pad from props  
