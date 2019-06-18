@@ -1,14 +1,8 @@
 #display {
-  /* min-width: 20vw;
-  min-height: 20vh; */
-
-  /* edit for responsiveness */
-  /* max-width: 800px;  */
-
   /* background-color: rgb(188, 229, 248); */
   background-color: rgb(245, 245, 245);
   border-radius: 8px;
-  margin: 5vh 12vw;
+  margin: 5vh 10vw auto 10vw;
   padding: 2em;
 }
 
@@ -17,10 +11,10 @@
    display: grid;
    /* grid-template-columns: repeat(3,1fr); */
    grid-template-columns: 1fr 1fr 1fr;
-   /* grid-gap: 10px; */
-   grid-auto-rows: minmax(100px, auto);
+   /* grid-auto-rows: minmax(100px, auto); */
 }
 
+/* to maintain pad aspect ratios */
 #display-grid > [style^='--aspect-ratio']::before {
   content: "";
   display: inline-block;
@@ -34,10 +28,8 @@
   grid-row: 1;
   grid-column: 1 / 4;
 
-
   /* padding: .25em; */
   margin: .75em;
-
   background-color: rgb(47, 125, 228);
   border: .25em solid black;
   border-radius: .25em;
@@ -52,4 +44,16 @@
 
 #clipName {
   text-align: center;
+}
+
+/* Media queries for responsive styling */
+@media (max-width: 767px) {
+  #display {
+    margin: 2vh 4vw auto 4vw;
+    padding: .25em;
+  }
+
+  .grid-pad {
+    margin: .25em .5em;
+  }
 }
