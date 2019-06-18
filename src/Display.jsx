@@ -8,14 +8,14 @@ class Display extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      played: " "
+      played: "Play Something"
     }
     this.displayPlayed = this.displayPlayed.bind(this);
   }
 
   // Lifecycle: after component mounts, pre-rendering
   componentDidMount() {
-    
+
   }
 
   // Remove modifications made in componentDidMount
@@ -26,9 +26,9 @@ class Display extends Component {
   /* Turns each drumpad object into its own DrumPad component
    * Returns multiple DrumPad components, so do not render directly
    * Note: Gives each pad a key since "each child should have a key prop" 
-   */  
+   */
   makePads = () => {
-    const allPads = (this.props.pads.drumpads).map((drumpads, i) => 
+    const allPads = (this.props.pads.drumpads).map((drumpads, i) =>
       <DrumPad pad={drumpads} displayPlayed={this.displayPlayed} key={i} />
     );
     return allPads;
@@ -45,10 +45,12 @@ class Display extends Component {
   render() {
     return (
       <div id="display">
-        <div id="playedDisplay">
-          <p id="clipName">{this.state.played}</p>
+        <div id="display-grid">
+          <div id="pad-played">
+            <p id="clipName">{this.state.played}</p>
+          </div>
+          {this.makePads()}
         </div>
-        {this.makePads()}
       </div>
     );
   }

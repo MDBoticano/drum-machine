@@ -51,7 +51,7 @@ class DrumPad extends Component {
     audio.play();
 
     // Optional: log note played
-    console.log(this.state.id);
+    // console.log(this.state.id);
 
     // Use callback function to udpate most recent note played in parent display
     this.props.displayPlayed(this.state.id);
@@ -61,7 +61,7 @@ class DrumPad extends Component {
   render() {
     return (
       <div onClick={this.playSound} className="drum-pad" id={this.state.id}>
-        {this.state.hotkey}
+        {/* {this.state.hotkey} */}
         <audio className="clip" id={this.state.hotkey} src={this.state.audioSource} />
       </div>
     );

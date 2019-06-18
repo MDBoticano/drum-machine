@@ -22,10 +22,19 @@ class App extends Component {
     }
   }
   
-  // Lifecycle: 
+  // Lifecycle: after component mounts, pre-rendering
   componentDidMount() {
-    // Enable for testing, disable when building to GH Pages
+    // Enable to use FCC test suite. Disable when building to GH Pages
     // this.loadScripts(test);
+    
+    // Body styling
+    document.body.classList.add("body-style");
+  }
+
+  // Lifecycle: Remove modifications made in componentDidMount
+  componentWillUnmount() {
+    // Remove Body styling
+    document.body.classList.remove("body-style");
   }
 
   /** 
@@ -38,6 +47,8 @@ class App extends Component {
     script.async = true;
     document.body.appendChild(script);
   }
+
+  
 
   // Render
   render() {

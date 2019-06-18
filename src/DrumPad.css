@@ -1,11 +1,14 @@
 .drum-pad {
   margin: .75em;
-  min-height: 80px; /* edit for responsiveness */
-  min-width: 80px;  /* edit for responsiveness */
-  max-width: 96px;  /* edit for responsiveness */
+  
+  /* edit for responsiveness */
+  /* min-height: 80px; 
+  min-width: 80px;  
+  max-width: 96px;   */
+
   background-color: rgb(221, 221, 221);
   border-radius: 4px;
   filter: drop-shadow(2px 2px 2px rgb(46, 46, 46));
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
 }

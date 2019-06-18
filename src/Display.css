@@ -1,18 +1,53 @@
 #display {
-  min-width: 20vw;
-  min-height: 20vh;
-  max-width: 320px; /* edit for responsiveness */
-  background-color: rgb(188, 229, 248);
+  /* min-width: 20vw;
+  min-height: 20vh; */
+
+  /* edit for responsiveness */
+  /* max-width: 320px;  */
+
+  /* background-color: rgb(188, 229, 248); */
+  background-color: rgb(245, 245, 245);
   border-radius: 8px;
-  margin: 10vh 10vh 0 10vh;
+  margin: 5vh 5vw;
   padding: 2em;
 }
 
-#playedDisplay {
-  padding: .25em;
-  min-height: 40px;
-  display: block;
-  background-color: rgb(243, 243, 243);
+#display-grid {
+   /* css grid */
+   display: grid;
+   /* grid-template-columns: repeat(3,1fr); */
+   grid-template-columns: 1fr 1fr 1fr;
+   /* grid-gap: 10px; */
+   grid-auto-rows: minmax(100px, auto);
+}
+
+#display-grid > [style^='--aspect-ratio']::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  padding-bottom: calc(100% / (var(--aspect-ratio)));
+}
+
+#pad-played {
+  /* css grid */
+  grid-row: 1;
+  grid-column: 1 / 4;
+
+
+  /* padding: .25em; */
+  margin: .75em;
+
+  background-color: rgb(47, 125, 228);
+  border: .25em solid black;
+  border-radius: .25em;
+
+  /* text modifications */
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: rgb(224, 224, 224);
 }
 
 #clipName {
