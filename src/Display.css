@@ -1,27 +1,43 @@
 :root {
-  --max-pad-width: 15vh;
+  --max-pad-width: 18vh;
 }
 
 #display {
   /* background-color: rgb(188, 229, 248); */
   background-color: rgb(245, 245, 245);
   border-radius: 8px;
-  margin: 5vh 15vw auto 15vw;
-  padding: 2.5em;
-  max-height: 75vh;
+  /* margin: 5vh 15vw auto 15vw; */
+  
+  /* max-height: 75vh; */
+  /* max-width: 40vw; */
+
+  /* centering div */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  /* make container no bigger than content */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  /* padding: 2.5em auto; */ /* doesn't work with width? */
+  
 }
 
 #display-grid {
    /* css grid */
    display: grid;
    grid-template-columns: repeat(3, minmax(0, var(--max-pad-width)));
+   justify-content: center;
 }
 
 /* to maintain pad aspect ratios */
 #display-grid > [style^='--aspect-ratio']::before {
   content: "";
   display: inline-block;
-  /* width: 1px; */
+  width: 1px;
   height: 0;
   padding-bottom: calc(100% / (var(--aspect-ratio)));
 }
@@ -32,7 +48,8 @@
   grid-column: 1 / 4;
 
   /* padding: .25em; */
-  margin: .75em;
+  /* margin: .75em; */
+  margin: 1em;
   background-color: rgb(47, 125, 228);
   border: .25em solid black;
   border-radius: .25em;
@@ -52,7 +69,7 @@
 /* Media queries for responsive styling */
 @media (max-width: 767px) {
   #display {
-    margin: 2vh 4vw auto 4vw;
-    padding: .25em;
+    /* margin: 2vh 4vw auto 4vw; */
+    padding: .5em;
   }
 }

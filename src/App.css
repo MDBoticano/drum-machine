@@ -2,3 +2,7 @@
 .body-style {
   background-color: rgb(250, 202, 202);
 }
+
+#drum-machine {
+  padding: 1em;
+}
