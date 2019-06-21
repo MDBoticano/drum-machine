@@ -1,15 +1,20 @@
+:root {
+  --max-pad-width: 15vh;
+}
+
 #display {
   /* background-color: rgb(188, 229, 248); */
   background-color: rgb(245, 245, 245);
   border-radius: 8px;
   margin: 5vh 15vw auto 15vw;
   padding: 2.5em;
+  max-height: 75vh;
 }
 
 #display-grid {
    /* css grid */
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: repeat(3, minmax(0, var(--max-pad-width)));
 }
 
 /* to maintain pad aspect ratios */
@@ -49,9 +54,5 @@
   #display {
     margin: 2vh 4vw auto 4vw;
     padding: .25em;
-  }
-
-  .grid-pad {
-    margin: .25em .5em;
   }
 }

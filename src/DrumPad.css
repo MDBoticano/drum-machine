@@ -6,7 +6,7 @@
 }
 
 .grid-pad {
-  margin: 1em 1em;
+  margin: .75em .75em;
 }
 
 .drum-pad {
@@ -37,7 +37,7 @@
 
 .padId {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.25em;
   margin: 0 0 0.5em 0;
 }
 
@@ -63,6 +63,15 @@
   /* "Remove" hotkey hints if touch device by setting color to match bg */
   .pad-text {
     color: var(--pad-color);
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-pad {
+    margin: .25em .5em;
+  }
+  .padId {
+    font-size: 1em;
   }
 }
 
