@@ -1,29 +1,28 @@
 :root {
-  --max-pad-width: 18vh;
+  /* --max-pad-width: 20vh; */
+  /* calculated approximate pad height limit */
+  /* # of em is approximate height of all other elemenets */
+  /* divide by number of rows of pads */
+  --max-pad-width: calc((100vh - 20em)/3);
 }
 
 #display {
   /* background-color: rgb(188, 229, 248); */
   background-color: rgb(245, 245, 245);
   border-radius: 8px;
+  padding: 1.5em;
   /* margin: 5vh 15vw auto 15vw; */
-  
   /* max-height: 75vh; */
   /* max-width: 40vw; */
 
-  /* centering div */
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  /* Centerying div */
+  margin-left: auto;
+  margin-right: auto;
 
   /* make container no bigger than content */
   width: -webkit-fit-content;
   width: -moz-fit-content;
-  width: fit-content;
-
-  /* padding: 2.5em auto; */ /* doesn't work with width? */
-  
+  width: fit-content;  
 }
 
 #display-grid {
@@ -47,9 +46,7 @@
   grid-row: 1;
   grid-column: 1 / 4;
 
-  /* padding: .25em; */
-  /* margin: .75em; */
-  margin: 1em;
+  margin: .25em;
   background-color: rgb(47, 125, 228);
   border: .25em solid black;
   border-radius: .25em;
@@ -69,7 +66,12 @@
 /* Media queries for responsive styling */
 @media (max-width: 767px) {
   #display {
-    /* margin: 2vh 4vw auto 4vw; */
+    padding: .75em;
+  }
+}
+
+@media (max-width: 479px) {
+  #display {
     padding: .5em;
   }
 }

@@ -6,7 +6,8 @@
 }
 
 .grid-pad {
-  margin: .75em 1.25em;
+  margin: .75em 1em;
+  /* margin: .25em .5em; */
 }
 
 .drum-pad {
@@ -60,9 +61,9 @@
 
 /* Media queries for responsive styling */
 @media (pointer: coarse) {
-  /* "Remove" hotkey hints if touch device by setting color to match bg */
+  /* "Remove" hotkey hints if touch device by setting color transparent */
   .pad-text {
-    color: var(--pad-color);
+    color: transparent;
   }
 }
 

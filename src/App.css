@@ -6,3 +6,10 @@
 #drum-machine {
   padding: 1em;
 }
+
+/* Media queries for responsive styling */
+@media (max-width: 479px) {
+  #drum-machine {
+    padding: .5em;
+  }
+}
