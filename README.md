@@ -1,3 +1,12 @@
+# Drum Machine
+I created a drum machine app using React. This is my submission to FreeCodeCamp's [Drum Machine](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-drum-machine/) for the Front End Libraries Projects.
+
+There are 9 pads each with an associated sound. Press the corresponding hotkey to activate the pad or simply click them. 
+
+You can interact with it [here](https://mdboticano.github.io/drum-machine/).
+
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
